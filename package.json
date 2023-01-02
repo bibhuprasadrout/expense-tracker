@@ -1,0 +1,34 @@
+{
+  "name": "expense-tracker",
+  "version": "1.0.0",
+  "description": "This is an application to track your expenses.",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bibhuprasadrout/expense-tracker.git"
+  },
+  "keywords": [
+    "expense",
+    "track",
+    "tracker"
+  ],
+  "author": "Bibhu Prasad Rout",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bibhuprasadrout/expense-tracker/issues"
+  },
+  "homepage": "https://github.com/bibhuprasadrout/expense-tracker#readme",
+  "devDependencies": {
+    "parcel": "^2.8.2",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
