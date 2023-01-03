@@ -2,11 +2,10 @@
   "name": "expense-tracker",
   "version": "1.0.0",
   "description": "This is an application to track your expenses.",
-  "main": "App.js",
   "scripts": {
     "test": "jest",
-    "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
   },
   "repository": {
     "type": "git",
