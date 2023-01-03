@@ -1,0 +1,20 @@
+.expenseEntry {
+  display: flex;
+  gap: 1rem;
+  .expenseInfoTitle {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .expenseInfoAmount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .expenseActionCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
