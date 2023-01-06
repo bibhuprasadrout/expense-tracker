@@ -1,4 +1,4 @@
-export default function ExpensesData() {
+export default ExpensesData = () => {
   const expensesData = [
     {
       id: 1,
@@ -121,8 +121,7 @@ export default function ExpensesData() {
       date: new Date(2021, 5, 12),
     },
   ];
-
   return expensesData;
-}
+};
 
 // stateless

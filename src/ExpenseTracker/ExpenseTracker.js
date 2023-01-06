@@ -1,18 +1,18 @@
 import "./ExpenseTracker.scss";
+
 import SectionComponennt from "../DesignSystem/SectionComponent/Section";
 import SectionTitleComponent from "../DesignSystem/SectionTitleComponent/SectionTitle";
-import ExpensesComponent from "../ExpenseTracker/ListExpense/ExpensesComponent/Expenses";
-import ExpenseFormComponent from "../ExpenseTracker/AddExpenses/ExpenseFormComponent/ExpenseForm";
+
+import NewExpense from "./AddExpenses/NewExpenseComponent/NewExpense";
+import Expenses from "../ExpenseTracker/ListExpense/ExpensesComponent/Expenses";
 
 const ExpenseTracker = () => {
   return (
-    <div>
-      <SectionComponennt>
-        <SectionTitleComponent>Expenses Tracker</SectionTitleComponent>;
-        <ExpenseFormComponent />
-        <ExpensesComponent />
-      </SectionComponennt>
-    </div>
+    <SectionComponennt className="expenseTrackerWrapper">
+      <SectionTitleComponent>Expenses Tracker</SectionTitleComponent>;
+      <NewExpense />
+      <Expenses />
+    </SectionComponennt>
   );
 };
 

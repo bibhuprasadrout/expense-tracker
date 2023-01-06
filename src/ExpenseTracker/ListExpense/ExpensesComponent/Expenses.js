@@ -6,7 +6,7 @@ import Wrapper90Component from "../../../DesignSystem/Wrapper90Component/Wrapper
 
 import ExpensesData from "../../../Data/data";
 
-import ExpenseItem from "../ExpenseItem/ExpenseItem";
+import ExpenseItem from "../ExpenseItemComponent/ExpenseItem";
 const ExpensesComponent = () => {
   const expensesData = ExpensesData();
 
@@ -14,10 +14,8 @@ const ExpensesComponent = () => {
     <Wrapper90Component>
       <CardComponent className="Expenses">
         <TitleComponennt>All Expenses</TitleComponennt>
-        <div>
-          <ul>
-            <ExpenseItem toChild={expensesData} />
-          </ul>
+        <div className="allExpensesListWrapper">
+          <ExpenseItem toChild={expensesData} />
         </div>
       </CardComponent>
     </Wrapper90Component>

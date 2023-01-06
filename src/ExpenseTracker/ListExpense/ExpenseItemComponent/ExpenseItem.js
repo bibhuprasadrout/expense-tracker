@@ -7,7 +7,7 @@ import FormatedDate from "../FormatedDateComponent/FormatedDate";
 const ExpenseItem = (props) => {
   const expensesData = props.toChild;
   return (
-    <div>
+    <ul className="allExpensesList">
       {expensesData.map((item) => {
         return (
           <li key={item.id}>
@@ -28,7 +28,7 @@ const ExpenseItem = (props) => {
           </li>
         );
       })}
-    </div>
+    </ul>
   );
 };
 export default ExpenseItem;
