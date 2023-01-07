@@ -27167,7 +27167,7 @@ $RefreshReg$(_c, "ExpenseTracker");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./ExpenseTracker.scss":"aUayx","../DesignSystem/SectionComponent/Section":"jlaJy","../DesignSystem/SectionTitleComponent/SectionTitle":"fZOov","../ExpenseTracker/ListExpense/ExpensesComponent/Expenses":"hrrhk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./AddExpenses/NewExpenseComponent/NewExpense":"3fRfU"}],"aUayx":[function() {},{}],"jlaJy":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","./ExpenseTracker.scss":"aUayx","../DesignSystem/SectionComponent/Section":"jlaJy","../DesignSystem/SectionTitleComponent/SectionTitle":"fZOov","./AddExpenses/NewExpenseComponent/NewExpense":"3fRfU","../ExpenseTracker/ListExpense/ExpensesComponent/Expenses":"hrrhk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"aUayx":[function() {},{}],"jlaJy":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$b678 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27395,173 +27395,50 @@ $RefreshReg$(_c, "SectionTitleComponennt");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./SectionTitle.scss":"aCSH7","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"aCSH7":[function() {},{}],"hrrhk":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$02d5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react/jsx-dev-runtime":"iTorj","./SectionTitle.scss":"aCSH7","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"aCSH7":[function() {},{}],"3fRfU":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$472a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$02d5.prelude(module);
+$parcel$ReactRefreshHelpers$472a.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _expensesScss = require("./Expenses.scss");
-var _card = require("../../../DesignSystem/CardComponent/Card");
-var _cardDefault = parcelHelpers.interopDefault(_card);
-var _title = require("../../../DesignSystem/TitleComponent/Title");
-var _titleDefault = parcelHelpers.interopDefault(_title);
-var _wrapper = require("../../../DesignSystem/Wrapper90Component/Wrapper");
-var _wrapperDefault = parcelHelpers.interopDefault(_wrapper);
+var _newExpenseScss = require("./NewExpense.scss");
+var _react = require("react");
 var _data = require("../../../Data/data");
 var _dataDefault = parcelHelpers.interopDefault(_data);
-var _expenseItem = require("../ExpenseItemComponent/ExpenseItem");
-var _expenseItemDefault = parcelHelpers.interopDefault(_expenseItem);
-const ExpensesComponent = ()=>{
-    const expensesData = (0, _dataDefault.default)();
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _wrapperDefault.default), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default), {
-            className: "Expenses",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _titleDefault.default), {
-                    children: "All Expenses"
-                }, void 0, false, {
-                    fileName: "src/ExpenseTracker/ListExpense/ExpensesComponent/Expenses.js",
-                    lineNumber: 16,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "allExpensesListWrapper",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _expenseItemDefault.default), {
-                        toChild: expensesData
-                    }, void 0, false, {
-                        fileName: "src/ExpenseTracker/ListExpense/ExpensesComponent/Expenses.js",
-                        lineNumber: 18,
-                        columnNumber: 11
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/ExpenseTracker/ListExpense/ExpensesComponent/Expenses.js",
-                    lineNumber: 17,
-                    columnNumber: 9
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/ExpenseTracker/ListExpense/ExpensesComponent/Expenses.js",
-            lineNumber: 15,
-            columnNumber: 7
-        }, undefined)
+var _expenseForm = require("../ExpenseFormComponent/ExpenseForm");
+var _expenseFormDefault = parcelHelpers.interopDefault(_expenseForm);
+var _s = $RefreshSig$();
+exports.default = NewExpense = _s(()=>{
+    _s();
+    const expenseData = (0, _dataDefault.default)();
+    const [id, setId] = (0, _react.useState)(expenseData.length + 1);
+    const newExpenseHandler = (enteredExpenseData)=>{
+        const newExpenseData = {
+            ...enteredExpenseData,
+            id: id
+        };
+        console.log(newExpenseData);
+        setId((prev)=>prev + 1);
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _expenseFormDefault.default), {
+        onNewExpense: newExpenseHandler
     }, void 0, false, {
-        fileName: "src/ExpenseTracker/ListExpense/ExpensesComponent/Expenses.js",
-        lineNumber: 14,
-        columnNumber: 5
-    }, undefined);
-};
-_c = ExpensesComponent;
-exports.default = ExpensesComponent;
-var _c;
-$RefreshReg$(_c, "ExpensesComponent");
-
-  $parcel$ReactRefreshHelpers$02d5.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","./Expenses.scss":"7kIvo","../../../DesignSystem/CardComponent/Card":"g7aRG","../../../DesignSystem/TitleComponent/Title":"dQKu7","../../../DesignSystem/Wrapper90Component/Wrapper":"44dmf","../../../Data/data":"bojbS","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../ExpenseItemComponent/ExpenseItem":"6Kmfb"}],"7kIvo":[function() {},{}],"g7aRG":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$bc39 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$bc39.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _cardScss = require("./Card.scss");
-const Card = (props)=>{
-    const classList = `card ${props.className}`;
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: classList,
-        children: props.children
-    }, void 0, false, {
-        fileName: "src/DesignSystem/CardComponent/Card.js",
-        lineNumber: 4,
+        fileName: "src/ExpenseTracker/AddExpenses/NewExpenseComponent/NewExpense.js",
+        lineNumber: 20,
         columnNumber: 10
     }, undefined);
-};
-_c = Card;
-exports.default = Card;
-var _c;
-$RefreshReg$(_c, "Card");
+}, "4a1hxvAkPWAttKRe2dojMPH/W58=");
 
-  $parcel$ReactRefreshHelpers$bc39.postlude(module);
+  $parcel$ReactRefreshHelpers$472a.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./Card.scss":"6R6E1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6R6E1":[function() {},{}],"dQKu7":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$cce3 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$cce3.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _titleScss = require("./Title.scss");
-const SectionTitleComponennt = (props)=>{
-    const classList = `title ${props.className}`;
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: classList,
-        children: props.children
-    }, void 0, false, {
-        fileName: "src/DesignSystem/TitleComponent/Title.js",
-        lineNumber: 4,
-        columnNumber: 10
-    }, undefined);
-};
-_c = SectionTitleComponennt;
-exports.default = SectionTitleComponennt;
-var _c;
-$RefreshReg$(_c, "SectionTitleComponennt");
-
-  $parcel$ReactRefreshHelpers$cce3.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","./Title.scss":"g6MMs","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"g6MMs":[function() {},{}],"44dmf":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$b8c9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$b8c9.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _wrapperScss = require("./Wrapper.scss");
-const Wrapper90Compoenet = (props)=>{
-    const classList = `wrapper ${props.classNamee}`;
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: classList,
-        children: props.children
-    }, void 0, false, {
-        fileName: "src/DesignSystem/Wrapper90Component/Wrapper.js",
-        lineNumber: 4,
-        columnNumber: 10
-    }, undefined);
-};
-_c = Wrapper90Compoenet;
-exports.default = Wrapper90Compoenet;
-var _c;
-$RefreshReg$(_c, "Wrapper90Compoenet");
-
-  $parcel$ReactRefreshHelpers$b8c9.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","./Wrapper.scss":"32WD4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"32WD4":[function() {},{}],"bojbS":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","./NewExpense.scss":"5A7z0","react":"21dqq","../../../Data/data":"bojbS","../ExpenseFormComponent/ExpenseForm":"6PRCa","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5A7z0":[function() {},{}],"bojbS":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 exports.default = ExpensesData = ()=>{
@@ -27690,203 +27567,7 @@ exports.default = ExpensesData = ()=>{
     return expensesData;
 }; // stateless
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6Kmfb":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$43ea = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$43ea.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _expenseItemScss = require("./ExpenseItem.scss");
-var _card = require("../../../DesignSystem/CardComponent/Card");
-var _cardDefault = parcelHelpers.interopDefault(_card);
-var _formatedDate = require("../FormatedDateComponent/FormatedDate");
-var _formatedDateDefault = parcelHelpers.interopDefault(_formatedDate);
-const ExpenseItem = (props)=>{
-    const expensesData = props.toChild;
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-        className: "allExpensesList",
-        children: expensesData.map((item)=>{
-            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default), {
-                    className: "expenseEntry",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default), {
-                            className: "expenseInfoCard expenseInfodate",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formatedDateDefault.default), {
-                                date: item.date
-                            }, void 0, false, {
-                                fileName: "src/ExpenseTracker/ListExpense/ExpenseItemComponent/ExpenseItem.js",
-                                lineNumber: 16,
-                                columnNumber: 17
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/ExpenseTracker/ListExpense/ExpenseItemComponent/ExpenseItem.js",
-                            lineNumber: 15,
-                            columnNumber: 15
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default), {
-                            className: "expenseInfoCard expenseInfoTitle",
-                            children: item.title
-                        }, void 0, false, {
-                            fileName: "src/ExpenseTracker/ListExpense/ExpenseItemComponent/ExpenseItem.js",
-                            lineNumber: 18,
-                            columnNumber: 15
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default), {
-                            className: "expenseInfoCard expenseInfoAmount",
-                            children: item.amount
-                        }, void 0, false, {
-                            fileName: "src/ExpenseTracker/ListExpense/ExpenseItemComponent/ExpenseItem.js",
-                            lineNumber: 21,
-                            columnNumber: 15
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default), {
-                            className: "expenseActionCard",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                children: "Edit this expense"
-                            }, void 0, false, {
-                                fileName: "src/ExpenseTracker/ListExpense/ExpenseItemComponent/ExpenseItem.js",
-                                lineNumber: 25,
-                                columnNumber: 17
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/ExpenseTracker/ListExpense/ExpenseItemComponent/ExpenseItem.js",
-                            lineNumber: 24,
-                            columnNumber: 15
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/ExpenseTracker/ListExpense/ExpenseItemComponent/ExpenseItem.js",
-                    lineNumber: 14,
-                    columnNumber: 13
-                }, undefined)
-            }, item.id, false, {
-                fileName: "src/ExpenseTracker/ListExpense/ExpenseItemComponent/ExpenseItem.js",
-                lineNumber: 13,
-                columnNumber: 11
-            }, undefined);
-        })
-    }, void 0, false, {
-        fileName: "src/ExpenseTracker/ListExpense/ExpenseItemComponent/ExpenseItem.js",
-        lineNumber: 10,
-        columnNumber: 5
-    }, undefined);
-};
-_c = ExpenseItem;
-exports.default = ExpenseItem;
-var _c;
-$RefreshReg$(_c, "ExpenseItem");
-
-  $parcel$ReactRefreshHelpers$43ea.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","./ExpenseItem.scss":"gdAcK","../../../DesignSystem/CardComponent/Card":"g7aRG","../FormatedDateComponent/FormatedDate":"1qPS5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gdAcK":[function() {},{}],"1qPS5":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$4ead = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$4ead.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _formatedDateScss = require("./FormatedDate.scss");
-const FormatedDate = (props)=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "dateFormated",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: props.date.toLocaleString("en-us", {
-                    month: "long"
-                })
-            }, void 0, false, {
-                fileName: "src/ExpenseTracker/ListExpense/FormatedDateComponent/FormatedDate.js",
-                lineNumber: 5,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: props.date.toLocaleString("en-us", {
-                    day: "2-digit"
-                })
-            }, void 0, false, {
-                fileName: "src/ExpenseTracker/ListExpense/FormatedDateComponent/FormatedDate.js",
-                lineNumber: 6,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: props.date.getFullYear()
-            }, void 0, false, {
-                fileName: "src/ExpenseTracker/ListExpense/FormatedDateComponent/FormatedDate.js",
-                lineNumber: 7,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/ExpenseTracker/ListExpense/FormatedDateComponent/FormatedDate.js",
-        lineNumber: 4,
-        columnNumber: 5
-    }, undefined);
-};
-_c = FormatedDate;
-exports.default = FormatedDate;
-var _c;
-$RefreshReg$(_c, "FormatedDate");
-
-  $parcel$ReactRefreshHelpers$4ead.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","./FormatedDate.scss":"1LMBC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1LMBC":[function() {},{}],"3fRfU":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$472a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$472a.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _newExpenseScss = require("./NewExpense.scss");
-var _react = require("react");
-var _data = require("../../../Data/data");
-var _dataDefault = parcelHelpers.interopDefault(_data);
-var _expenseForm = require("../ExpenseFormComponent/ExpenseForm");
-var _expenseFormDefault = parcelHelpers.interopDefault(_expenseForm);
-var _s = $RefreshSig$();
-exports.default = NewExpense = _s(()=>{
-    _s();
-    const expenseData = (0, _dataDefault.default)();
-    const [id, setId] = (0, _react.useState)(expenseData.length + 1);
-    const newExpenseHandler = (enteredExpenseData)=>{
-        const newExpenseData = {
-            ...enteredExpenseData,
-            id: id
-        };
-        console.log(newExpenseData);
-        setId((prev)=>prev + 1);
-    };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _expenseFormDefault.default), {
-        onNewExpense: newExpenseHandler
-    }, void 0, false, {
-        fileName: "src/ExpenseTracker/AddExpenses/NewExpenseComponent/NewExpense.js",
-        lineNumber: 20,
-        columnNumber: 10
-    }, undefined);
-}, "4a1hxvAkPWAttKRe2dojMPH/W58=");
-
-  $parcel$ReactRefreshHelpers$472a.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","./NewExpense.scss":"5A7z0","react":"21dqq","../../../Data/data":"bojbS","../ExpenseFormComponent/ExpenseForm":"6PRCa","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5A7z0":[function() {},{}],"6PRCa":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6PRCa":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$4c02 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -28099,7 +27780,103 @@ exports.default = ExpenseForm = _s((props)=>{
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./ExpenseForm.scss":"2Vxi6","react":"21dqq","../../../DesignSystem/CardComponent/Card":"g7aRG","../../../DesignSystem/TitleComponent/Title":"dQKu7","../../../DesignSystem/Wrapper90Component/Wrapper":"44dmf","../../../Data/data":"bojbS","../AddExpenseControllerComponent/AddExpenseController":"40dlv","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"2Vxi6":[function() {},{}],"40dlv":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","./ExpenseForm.scss":"2Vxi6","react":"21dqq","../../../DesignSystem/CardComponent/Card":"g7aRG","../../../DesignSystem/TitleComponent/Title":"dQKu7","../../../DesignSystem/Wrapper90Component/Wrapper":"44dmf","../../../Data/data":"bojbS","../AddExpenseControllerComponent/AddExpenseController":"40dlv","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"2Vxi6":[function() {},{}],"g7aRG":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$bc39 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$bc39.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _cardScss = require("./Card.scss");
+const Card = (props)=>{
+    const classList = `card ${props.className}`;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: classList,
+        children: props.children
+    }, void 0, false, {
+        fileName: "src/DesignSystem/CardComponent/Card.js",
+        lineNumber: 4,
+        columnNumber: 10
+    }, undefined);
+};
+_c = Card;
+exports.default = Card;
+var _c;
+$RefreshReg$(_c, "Card");
+
+  $parcel$ReactRefreshHelpers$bc39.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","./Card.scss":"6R6E1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6R6E1":[function() {},{}],"dQKu7":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$cce3 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$cce3.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _titleScss = require("./Title.scss");
+const SectionTitleComponennt = (props)=>{
+    const classList = `title ${props.className}`;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: classList,
+        children: props.children
+    }, void 0, false, {
+        fileName: "src/DesignSystem/TitleComponent/Title.js",
+        lineNumber: 4,
+        columnNumber: 10
+    }, undefined);
+};
+_c = SectionTitleComponennt;
+exports.default = SectionTitleComponennt;
+var _c;
+$RefreshReg$(_c, "SectionTitleComponennt");
+
+  $parcel$ReactRefreshHelpers$cce3.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","./Title.scss":"g6MMs","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"g6MMs":[function() {},{}],"44dmf":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$b8c9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$b8c9.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _wrapperScss = require("./Wrapper.scss");
+const Wrapper90Compoenet = (props)=>{
+    const classList = `wrapper ${props.classNamee}`;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: classList,
+        children: props.children
+    }, void 0, false, {
+        fileName: "src/DesignSystem/Wrapper90Component/Wrapper.js",
+        lineNumber: 4,
+        columnNumber: 10
+    }, undefined);
+};
+_c = Wrapper90Compoenet;
+exports.default = Wrapper90Compoenet;
+var _c;
+$RefreshReg$(_c, "Wrapper90Compoenet");
+
+  $parcel$ReactRefreshHelpers$b8c9.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","./Wrapper.scss":"32WD4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"32WD4":[function() {},{}],"40dlv":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$04a9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -28135,6 +27912,229 @@ $RefreshReg$(_c, "AddExpenseController");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./AddExpenseController.scss":"7mNGW","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7mNGW":[function() {},{}]},["1xC6H","7Zeie","2kQhy"], "2kQhy", "parcelRequire9173")
+},{"react/jsx-dev-runtime":"iTorj","./AddExpenseController.scss":"7mNGW","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7mNGW":[function() {},{}],"hrrhk":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$02d5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$02d5.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _expensesScss = require("./Expenses.scss");
+var _card = require("../../../DesignSystem/CardComponent/Card");
+var _cardDefault = parcelHelpers.interopDefault(_card);
+var _title = require("../../../DesignSystem/TitleComponent/Title");
+var _titleDefault = parcelHelpers.interopDefault(_title);
+var _wrapper = require("../../../DesignSystem/Wrapper90Component/Wrapper");
+var _wrapperDefault = parcelHelpers.interopDefault(_wrapper);
+var _data = require("../../../Data/data");
+var _dataDefault = parcelHelpers.interopDefault(_data);
+var _expenseItem = require("../ExpenseItemComponent/ExpenseItem");
+var _expenseItemDefault = parcelHelpers.interopDefault(_expenseItem);
+const ExpensesComponent = ()=>{
+    const expensesData = (0, _dataDefault.default)();
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _wrapperDefault.default), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default), {
+            className: "Expenses",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _titleDefault.default), {
+                    children: "All Expenses"
+                }, void 0, false, {
+                    fileName: "src/ExpenseTracker/ListExpense/ExpensesComponent/Expenses.js",
+                    lineNumber: 16,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "allExpensesListWrapper",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _expenseItemDefault.default), {
+                        toChild: expensesData
+                    }, void 0, false, {
+                        fileName: "src/ExpenseTracker/ListExpense/ExpensesComponent/Expenses.js",
+                        lineNumber: 18,
+                        columnNumber: 11
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/ExpenseTracker/ListExpense/ExpensesComponent/Expenses.js",
+                    lineNumber: 17,
+                    columnNumber: 9
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/ExpenseTracker/ListExpense/ExpensesComponent/Expenses.js",
+            lineNumber: 15,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/ExpenseTracker/ListExpense/ExpensesComponent/Expenses.js",
+        lineNumber: 14,
+        columnNumber: 5
+    }, undefined);
+};
+_c = ExpensesComponent;
+exports.default = ExpensesComponent;
+var _c;
+$RefreshReg$(_c, "ExpensesComponent");
+
+  $parcel$ReactRefreshHelpers$02d5.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","./Expenses.scss":"7kIvo","../../../DesignSystem/CardComponent/Card":"g7aRG","../../../DesignSystem/TitleComponent/Title":"dQKu7","../../../DesignSystem/Wrapper90Component/Wrapper":"44dmf","../../../Data/data":"bojbS","../ExpenseItemComponent/ExpenseItem":"6Kmfb","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7kIvo":[function() {},{}],"6Kmfb":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$43ea = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$43ea.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _expenseItemScss = require("./ExpenseItem.scss");
+var _card = require("../../../DesignSystem/CardComponent/Card");
+var _cardDefault = parcelHelpers.interopDefault(_card);
+var _formatedDate = require("../FormatedDateComponent/FormatedDate");
+var _formatedDateDefault = parcelHelpers.interopDefault(_formatedDate);
+const ExpenseItem = (props)=>{
+    const expensesData = props.toChild;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+        className: "allExpensesList",
+        children: expensesData.map((item)=>{
+            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default), {
+                    className: "expenseEntry",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default), {
+                            className: "expenseInfoCard expenseInfodate",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formatedDateDefault.default), {
+                                date: item.date
+                            }, void 0, false, {
+                                fileName: "src/ExpenseTracker/ListExpense/ExpenseItemComponent/ExpenseItem.js",
+                                lineNumber: 16,
+                                columnNumber: 17
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/ExpenseTracker/ListExpense/ExpenseItemComponent/ExpenseItem.js",
+                            lineNumber: 15,
+                            columnNumber: 15
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default), {
+                            className: "expenseInfoCard expenseInfoTitle",
+                            children: item.title
+                        }, void 0, false, {
+                            fileName: "src/ExpenseTracker/ListExpense/ExpenseItemComponent/ExpenseItem.js",
+                            lineNumber: 18,
+                            columnNumber: 15
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default), {
+                            className: "expenseInfoCard expenseInfoAmount",
+                            children: item.amount
+                        }, void 0, false, {
+                            fileName: "src/ExpenseTracker/ListExpense/ExpenseItemComponent/ExpenseItem.js",
+                            lineNumber: 21,
+                            columnNumber: 15
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default), {
+                            className: "expenseActionCard",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                children: "Edit this expense"
+                            }, void 0, false, {
+                                fileName: "src/ExpenseTracker/ListExpense/ExpenseItemComponent/ExpenseItem.js",
+                                lineNumber: 25,
+                                columnNumber: 17
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/ExpenseTracker/ListExpense/ExpenseItemComponent/ExpenseItem.js",
+                            lineNumber: 24,
+                            columnNumber: 15
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/ExpenseTracker/ListExpense/ExpenseItemComponent/ExpenseItem.js",
+                    lineNumber: 14,
+                    columnNumber: 13
+                }, undefined)
+            }, item.id, false, {
+                fileName: "src/ExpenseTracker/ListExpense/ExpenseItemComponent/ExpenseItem.js",
+                lineNumber: 13,
+                columnNumber: 11
+            }, undefined);
+        })
+    }, void 0, false, {
+        fileName: "src/ExpenseTracker/ListExpense/ExpenseItemComponent/ExpenseItem.js",
+        lineNumber: 10,
+        columnNumber: 5
+    }, undefined);
+};
+_c = ExpenseItem;
+exports.default = ExpenseItem;
+var _c;
+$RefreshReg$(_c, "ExpenseItem");
+
+  $parcel$ReactRefreshHelpers$43ea.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","./ExpenseItem.scss":"gdAcK","../../../DesignSystem/CardComponent/Card":"g7aRG","../FormatedDateComponent/FormatedDate":"1qPS5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gdAcK":[function() {},{}],"1qPS5":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$4ead = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$4ead.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _formatedDateScss = require("./FormatedDate.scss");
+const FormatedDate = (props)=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "dateFormated",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: props.date.toLocaleString("en-us", {
+                    month: "long"
+                })
+            }, void 0, false, {
+                fileName: "src/ExpenseTracker/ListExpense/FormatedDateComponent/FormatedDate.js",
+                lineNumber: 5,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: props.date.toLocaleString("en-us", {
+                    day: "2-digit"
+                })
+            }, void 0, false, {
+                fileName: "src/ExpenseTracker/ListExpense/FormatedDateComponent/FormatedDate.js",
+                lineNumber: 6,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: props.date.getFullYear()
+            }, void 0, false, {
+                fileName: "src/ExpenseTracker/ListExpense/FormatedDateComponent/FormatedDate.js",
+                lineNumber: 7,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/ExpenseTracker/ListExpense/FormatedDateComponent/FormatedDate.js",
+        lineNumber: 4,
+        columnNumber: 5
+    }, undefined);
+};
+_c = FormatedDate;
+exports.default = FormatedDate;
+var _c;
+$RefreshReg$(_c, "FormatedDate");
+
+  $parcel$ReactRefreshHelpers$4ead.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","./FormatedDate.scss":"1LMBC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1LMBC":[function() {},{}]},["1xC6H","7Zeie","2kQhy"], "2kQhy", "parcelRequire9173")
 
 //# sourceMappingURL=index.7271efb6.js.map

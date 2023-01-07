@@ -31,16 +31,6 @@ li {
   text-decoration: none;
 }
 
-
-
-.formCard form, .formCard form .formControls {
-  flex-flow: column;
-  gap: 1rem;
-  display: flex;
-}
-
-
-
 .dateFormated {
   flex-flow: column;
   justify-content: center;
@@ -83,6 +73,10 @@ li {
   display: flex;
 }
 
+
+
+
+
 .wrapper {
   width: 90vw;
   margin: 0 auto;
@@ -101,6 +95,12 @@ li {
   border: 1px solid #e1e1e1b3;
   border-radius: 7px;
   padding: 1rem;
+}
+
+.formCard form, .formCard form .formControls {
+  flex-flow: column;
+  gap: 1rem;
+  display: flex;
 }
 
 
