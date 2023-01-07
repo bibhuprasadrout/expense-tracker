@@ -1,0 +1,126 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  font-family: Tahoma, Verdana, sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace;
+}
+
+*, :before, :after {
+  box-sizing: border-box;
+}
+
+dl, ol, ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.link, .link:hover {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  font-style: inherit;
+  text-decoration: none;
+}
+
+
+
+.formCard form, .formCard form .formControls {
+  flex-flow: column;
+  gap: 1rem;
+  display: flex;
+}
+
+
+
+.dateFormated {
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.allExpensesList {
+  flex-flow: column;
+  gap: 1rem;
+  display: flex;
+}
+
+.allExpensesList .expenseEntry {
+  gap: 1rem;
+  display: flex;
+}
+
+.allExpensesList .expenseEntry .expenseInfodate {
+  min-width: 7rem;
+}
+
+.allExpensesList .expenseEntry .expenseInfoTitle {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.allExpensesList .expenseEntry .expenseInfoAmount {
+  min-width: 7rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.allExpensesList .expenseEntry .expenseActionCard {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.wrapper {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  padding: 2rem 0 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 3rem;
+  font-weight: normal;
+}
+
+.card {
+  background-color: #e1e1e14d;
+  border: 1px solid #e1e1e1b3;
+  border-radius: 7px;
+  padding: 1rem;
+}
+
+
+
+.sectionTitle {
+  text-align: center;
+  padding: 2rem 0 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.section {
+  margin: 1rem 0 2rem;
+}
+
+.expenseTrackerWrapper {
+  flex-flow: column;
+  gap: 1rem;
+  display: flex;
+}
+
+/*# sourceMappingURL=index.ce1d6491.css.map */
