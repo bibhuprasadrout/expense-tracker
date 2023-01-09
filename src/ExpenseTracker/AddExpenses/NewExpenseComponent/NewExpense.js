@@ -5,7 +5,7 @@ import { useState } from "react";
 import ExpensesData from "../../../Data/data";
 import ExpenseForm from "../ExpenseFormComponent/ExpenseForm";
 
-export default NewExpense = () => {
+const NewExpense = () => {
   const expenseData = ExpensesData();
   const [id, setId] = useState(expenseData.length + 1);
   const newExpenseHandler = (enteredExpenseData) => {
@@ -19,3 +19,4 @@ export default NewExpense = () => {
 
   return <ExpenseForm onNewExpense={newExpenseHandler} />;
 };
+export default NewExpense;

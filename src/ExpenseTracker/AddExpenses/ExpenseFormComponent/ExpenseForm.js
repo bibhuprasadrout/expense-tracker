@@ -9,7 +9,7 @@ import Wrapper90Component from "../../../DesignSystem/Wrapper90Component/Wrapper
 import ExpensesData from "../../../Data/data";
 import AddExpenseController from "../AddExpenseControllerComponent/AddExpenseController";
 
-export default ExpenseForm = (props) => {
+const ExpenseForm = (props) => {
   // Child omponent of NewExpenseComponent.
   // This component renders a form to accept input from user
   const expenseData = ExpensesData();
@@ -102,3 +102,4 @@ export default ExpenseForm = (props) => {
     </Wrapper90Component>
   );
 };
+export default ExpenseForm;
