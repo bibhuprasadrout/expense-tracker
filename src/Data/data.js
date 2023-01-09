@@ -1,4 +1,4 @@
-export default ExpensesData = () => {
+const ExpensesData = () => {
   const expensesData = [
     {
       id: 1,
@@ -124,4 +124,5 @@ export default ExpensesData = () => {
   return expensesData;
 };
 
+export default ExpensesData;
 // stateless
