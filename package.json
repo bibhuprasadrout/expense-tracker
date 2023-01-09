@@ -2,7 +2,6 @@
   "name": "expense-tracker",
   "version": "1.0.0",
   "description": "This is an application to track your expenses.",
-  "main": "App.js",
   "scripts": {
     "test": "jest",
     "start": "parcel src/index.html",
