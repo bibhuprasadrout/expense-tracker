@@ -1,9 +1,10 @@
 import "./NewExpense.scss";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import ExpensesData from "../../../Data/data";
 import ExpenseForm from "../ExpenseFormComponent/ExpenseForm";
+import AddExpenseController from "../AddExpenseControllerComponent/AddExpenseController";
 
 const NewExpense = () => {
   const expenseData = ExpensesData();
@@ -16,7 +17,27 @@ const NewExpense = () => {
     console.log(newExpenseData);
     setId((prev) => prev + 1);
   };
-
-  return <ExpenseForm onNewExpense={newExpenseHandler} />;
+  const [expenseFormStatus, setExpenseFormStatus] = useState(false);
+  console.log(expenseFormStatus);
+  useEffect(() => {
+    console.log(expenseFormStatus);
+  }, [expenseFormStatus]);
+  return (
+    <>
+      {expenseFormStatus && (
+        <ExpenseForm
+          onNewExpense={newExpenseHandler}
+          expenseFormStatusTrue={expenseFormStatus}
+          changeExpenseFormStatus={setExpenseFormStatus}
+        />
+      )}
+      {!expenseFormStatus && (
+        <AddExpenseController
+          expenseFormStatusFalse={expenseFormStatus}
+          changeExpenseFormStatus={setExpenseFormStatus}
+        />
+      )}
+    </>
+  );
 };
 export default NewExpense;

@@ -1,6 +1,7 @@
 import "./ExpenseItem.scss";
 
 import CardComponent from "../../../DesignSystem/CardComponent/Card";
+import Button from "../../../DesignSystem/Button/Button";
 
 import FormatedDate from "../FormatedDateComponent/FormatedDate";
 
@@ -22,7 +23,7 @@ const ExpenseItem = (props) => {
                 {item.amount}
               </CardComponent>
               <CardComponent className="expenseActionCard">
-                <button>Edit this expense</button>
+                <Button>Edit this expense</Button>
               </CardComponent>
             </CardComponent>
           </li>

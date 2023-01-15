@@ -31,12 +31,79 @@ li {
   text-decoration: none;
 }
 
+.button {
+  appearance: none;
+  box-sizing: border-box;
+  color: #3c4043;
+  cursor: pointer;
+  fill: currentColor;
+  height: 3rem;
+  letter-spacing: .25px;
+  max-width: 130%;
+  text-align: center;
+  text-transform: none;
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  will-change: transform, opacity;
+  z-index: 0;
+  background-color: #ffffffb3;
+  border: 7px solid #e1e1e1b3;
+  border-radius: 7px;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 3rem;
+  line-height: normal;
+  transition: box-shadow .28s cubic-bezier(.4, 0, .2, 1), opacity 15ms linear 30ms, transform .27s cubic-bezier(0, 0, .2, 1);
+  display: inline-flex;
+  position: relative;
+  overflow: visible;
+  box-shadow: 0 3px 5px -1px #0003, 0 6px 10px #00000024, 0 1px 18px #0000001f;
+}
+
+.button:hover {
+  color: #000;
+  background-color: #fafafab3;
+}
+
+.button:active {
+  outline: none;
+  box-shadow: 0 4px 4px #3c40434d, 0 8px 12px 6px #3c404326;
+}
+
+.button:focus {
+  border: 7px solid #aaaaaab3;
+  outline: none;
+}
+
+.button:not(:disabled) {
+  box-shadow: 0 1px 3px #3c40434d, 0 4px 8px 3px #3c404326;
+}
+
+.button:not(:disabled):hover {
+  box-shadow: 0 2px 3px #3c40434d, 0 6px 10px 4px #3c404326;
+}
+
+.button:not(:disabled):focus {
+  box-shadow: 0 1px 3px #3c40434d, 0 4px 8px 3px #3c404326;
+}
+
+.button:not(:disabled):active {
+  box-shadow: 0 4px 4px #3c40434d, 0 8px 12px 6px #3c404326;
+}
+
+.button:disabled {
+  box-shadow: 0 1px 3px #3c40434d, 0 4px 8px 3px #3c404326;
+}
+
 .dateFormated {
   flex-flow: column;
   justify-content: center;
   align-items: center;
   display: flex;
 }
+
+
 
 .allExpensesList {
   flex-flow: column;
@@ -75,7 +142,19 @@ li {
 
 
 
+.addMyExpenseCard {
+  min-height: 30rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
 
+.addMyExpenseCard button {
+  height: auto;
+  padding: 1rem 3rem;
+  font-size: 3rem;
+  font-weight: 500;
+}
 
 .wrapper {
   width: 90vw;
@@ -97,8 +176,33 @@ li {
   padding: 1rem;
 }
 
-.formCard form, .formCard form .formControls {
+.expenseFormCard {
+  min-height: 30rem;
+}
+
+.expenseFormCard .formCard {
+  display: inherit;
+}
+
+.expenseFormCard .formCard .hide {
+  display: none;
+}
+
+.expenseFormCard .formCard form, .expenseFormCard .formCard form .formControls {
   flex-flow: column;
+  gap: 1rem;
+  display: flex;
+}
+
+.expenseFormCard .formCard form .formControls .formControl input {
+  height: 2.5rem;
+  border: 7px solid #e6e6e64d;
+  border-radius: 7px;
+  padding: 1rem;
+}
+
+.expenseFormCard .formCard form .formActions {
+  justify-content: flex-start;
   gap: 1rem;
   display: flex;
 }

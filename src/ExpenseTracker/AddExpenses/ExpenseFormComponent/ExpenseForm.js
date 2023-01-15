@@ -1,15 +1,19 @@
 import "./ExpenseForm.scss";
 
-import { useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 
 import CardComponent from "../../../DesignSystem/CardComponent/Card";
 import TitleComponennt from "../../../DesignSystem/TitleComponent/Title";
 import Wrapper90Component from "../../../DesignSystem/Wrapper90Component/Wrapper";
 
 import ExpensesData from "../../../Data/data";
-import AddExpenseController from "../AddExpenseControllerComponent/AddExpenseController";
 
-const ExpenseForm = (props) => {
+const ExpenseForm = ({
+  onNewExpense,
+  changeExpenseFormStatus,
+  expenseFormStatusTrue,
+  ...rest
+}) => {
   // Child omponent of NewExpenseComponent.
   // This component renders a form to accept input from user
   const expenseData = ExpensesData();
@@ -37,6 +41,7 @@ const ExpenseForm = (props) => {
       return { ...prevExpense, expenseDate: event.target.value };
     });
   };
+  const [state, setState] = useState("Not Clicked");
   const submitHandler = (event) => {
     event.preventDefault();
     const enteredExpenseData = {
@@ -44,7 +49,7 @@ const ExpenseForm = (props) => {
       amount: expense.expenseAmount,
       date: new Date(expense.expenseDate).toLocaleDateString(),
     };
-    props.onNewExpense(enteredExpenseData);
+    onNewExpense(enteredExpenseData);
     setExpense(() => {
       return {
         expenseTitle: " ",
@@ -52,16 +57,22 @@ const ExpenseForm = (props) => {
         expenseDate: " ",
       };
     });
+    renderAddMyExpense();
+  };
+  useEffect(() => {}, [state]);
+  const renderAddMyExpense = () => {
+    expenseFormStatusTrue
+      ? changeExpenseFormStatus((prev) => !prev)
+      : changeExpenseFormStatus((prev) => prev);
   };
   return (
     <Wrapper90Component>
-      <CardComponent>
+      <CardComponent className="expenseFormCard">
         <TitleComponennt>Enter Expense Form</TitleComponennt>
         <CardComponent className="formCard">
           <form onSubmit={submitHandler}>
             <CardComponent className="formControls">
               <div className="formControl">
-                {/* <label>Expense: </label> */}
                 <input
                   placeholder="Expense Name"
                   type="text"
@@ -70,7 +81,6 @@ const ExpenseForm = (props) => {
                 />
               </div>
               <div className="formControl">
-                {/* <label>Amount: </label> */}
                 <input
                   placeholder="Amount"
                   type="number"
@@ -81,7 +91,6 @@ const ExpenseForm = (props) => {
                 />
               </div>
               <div className="formControl">
-                {/* <label>Date: </label> */}
                 <input
                   type="date"
                   min="2021-01-01"
@@ -92,12 +101,23 @@ const ExpenseForm = (props) => {
               </div>
             </CardComponent>
             <CardComponent className="formActions">
-              <button type="submit">Submit</button>
-              <button type="reset">Reset</button>
+              <button className="button" type="submit">
+                Submit
+              </button>
+              <button
+                className="button"
+                type="reset"
+                onClick={
+                  // setState("Clicked")
+                  // setState((prev) => !prev)
+                  () => renderAddMyExpense()
+                }
+              >
+                Reset
+              </button>
             </CardComponent>
           </form>
         </CardComponent>
-        <AddExpenseController />
       </CardComponent>
     </Wrapper90Component>
   );
