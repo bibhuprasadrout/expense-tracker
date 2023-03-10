@@ -24,12 +24,17 @@
   "homepage": "https://github.com/bibhuprasadrout/expense-tracker#readme",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.8.2",
+    "buffer": "^5.7.1",
     "parcel": "^2.8.2",
     "process": "^0.11.10"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.3",
+    "axios": "^1.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sass": "^1.57.1"
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.8.2",
+    "styled-components": "^5.3.8"
   }
 }

@@ -1,6 +1,16 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-import ExpenseTracker from "./ExpenseTracker/ExpenseTracker";
-const App = () => <ExpenseTracker />;
-ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+import { Outlet } from "react-router-dom";
+import { Provider } from "react-redux";
+import Store from "./Utils/Store/Store";
+import { Navbar } from "./Navbar/Navbar";
+const App = () => {
+  return (
+    <>
+      <Provider store={Store}>
+        <Navbar />
+        <Outlet />
+      </Provider>
+    </>
+  );
+};
 export default App;
