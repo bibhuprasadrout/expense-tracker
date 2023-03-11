@@ -10,10 +10,10 @@ const UserAuthSlice = createSlice({
   },
   reducers: {
     login: (state) => {
-      state.authStatus.currentLoginState = true;
+      state.currentLoginState = true;
     },
     logoff: (state) => {
-      state.authStatus.currentLoginState = false;
+      state.currentLoginState = false;
     },
   },
 });

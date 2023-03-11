@@ -26,7 +26,7 @@ const NavMenuItem = styled(Card)``;
 export const Navbar = () => {
   const dispatch = useDispatch();
   const loginStatus = useSelector(
-    (loginStatus) => loginStatus.userAuth.authStatus.currentLoginState
+    (loginStatus) => loginStatus.userAuth.currentLoginState
   );
   const handleLoginStatus = () => {
     (() => dispatch(logoff()))();
