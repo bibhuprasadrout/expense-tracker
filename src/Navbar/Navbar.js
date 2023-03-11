@@ -40,7 +40,7 @@ export const Navbar = () => {
             <Link to={"/home"}>
               <NavMenuItem>Home</NavMenuItem>
             </Link>
-            {loginStatus.currentLoginState ? (
+            {loginStatus?.currentLoginState ? (
               <Link to={"/"} onClick={handleLoginStatus}>
                 <NavMenuItem>Logoff </NavMenuItem>
               </Link>

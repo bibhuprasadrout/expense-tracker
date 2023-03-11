@@ -10,7 +10,7 @@ export const Home = () => {
     <>
       <Wrapper>
         <Card>
-          {homeStatus.currentLoginState ? (
+          {homeStatus?.currentLoginState ? (
             <ExpenseTracker />
           ) : (
             <div>Please login first</div>
