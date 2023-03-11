@@ -25,7 +25,7 @@ const NavbarCard = styled(Card)`
 const NavMenuItem = styled(Card)``;
 export const Navbar = () => {
   const dispatch = useDispatch();
-  const loginStatus = useSelector((store) => store.userAuth.currentLoginState);
+  const loginStatus = useSelector((store) => store.userAuth);
   const handleLoginStatus = () => {
     (() => dispatch(logoff()))();
   };
@@ -40,7 +40,7 @@ export const Navbar = () => {
             <Link to={"/home"}>
               <NavMenuItem>Home</NavMenuItem>
             </Link>
-            {loginStatus ? (
+            {loginStatus.currentLoginState ? (
               <Link to={"/"} onClick={handleLoginStatus}>
                 <NavMenuItem>Logoff </NavMenuItem>
               </Link>
