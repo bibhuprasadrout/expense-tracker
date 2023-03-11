@@ -5,8 +5,8 @@ import userAuthReducer from "../Slices/UserAuthSlice";
 const Store = configureStore({
   reducer: {
     expenses: expenseReducer,
-    user: userReducer,
     userAuth: userAuthReducer,
+    user: userReducer,
   },
 });
 export default Store;
