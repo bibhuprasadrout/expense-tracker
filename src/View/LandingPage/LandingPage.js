@@ -2,10 +2,11 @@ import styled from "styled-components";
 import { Card } from "../../DesignSystem/Card/Card";
 import { Wrapper } from "../../DesignSystem/Wrapper/Wrapper";
 const LandingPageWrapper = styled(Wrapper)`
-  height: calc(100% - 8rem);
+  min-height: calc(100vh - 8rem);
+  height: 100%;
 `;
 const LandingPageCard = styled(Card)`
-  height: 100%;
+  min-height: inherit;
 `;
 export const LandingPage = () => {
   return (

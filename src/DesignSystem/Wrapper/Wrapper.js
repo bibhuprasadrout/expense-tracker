@@ -1,6 +1,6 @@
 import styled from "styled-components";
 export const Wrapper = styled.div`
-  width: calc(100% - 2rem);
+  width: 100%;
   margin: 0 auto;
   @media (min-width: 32em) {
     width: 90vw;

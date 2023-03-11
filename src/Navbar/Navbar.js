@@ -5,7 +5,7 @@ import { Wrapper } from "../DesignSystem/Wrapper/Wrapper";
 import { useSelector, useDispatch } from "react-redux";
 import { logoff } from "../Utils/Slices/UserAuthSlice";
 const NavbarWrapper = styled(Wrapper)`
-  padding: 1rem 0;
+  padding: 0 0 1rem;
   .navbarLogo {
   }
 `;

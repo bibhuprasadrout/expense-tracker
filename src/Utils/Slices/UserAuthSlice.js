@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 const UserAuthSlice = createSlice({
-  name: "auth",
+  name: "userAuth",
   initialState: {
     initialLoginState: false,
     currentLoginState: false,
@@ -16,9 +16,3 @@ const UserAuthSlice = createSlice({
 });
 export const { login, logoff } = UserAuthSlice.actions;
 export default UserAuthSlice.reducer;
-
-// LoginStatus: () => (this.currentLoginState ? "Logout" : "Login"),
-// items: [
-//   {
-//   },
-// ],
