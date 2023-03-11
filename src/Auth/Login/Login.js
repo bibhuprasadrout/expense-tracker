@@ -131,8 +131,8 @@ export const Login = () => {
     if (userNameIsValid && passwordIsValid) {
       (() => {
         dispatch(login());
-        navigate("/home");
       })();
+      navigate("/home");
     } else {
       (() => {
         dispatch(logoff());
