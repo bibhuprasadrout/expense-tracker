@@ -4,9 +4,7 @@ import { useEffect, useState } from "react";
 import { Wrapper } from "../../DesignSystem/Wrapper/Wrapper";
 import { Card } from "../../DesignSystem/Card/Card";
 export const Home = () => {
-  const homeStatus = useSelector(
-    (homeStatus) => homeStatus.userAuth.currentLoginState
-  );
+  const homeStatus = useSelector((store) => store.userAuth.currentLoginState);
   useEffect(() => {}, []);
   return (
     <>
