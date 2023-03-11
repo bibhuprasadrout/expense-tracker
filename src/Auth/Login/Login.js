@@ -12,9 +12,6 @@ import { login, logoff } from "../../Utils/Slices/UserAuthSlice";
 
 export const Login = () => {
   const userInfo = useSelector((userinfo) => userinfo.user.items);
-  const userAuthInfo = useSelector(
-    (userAuth) => userAuth?.userAuth?.authStatus
-  );
   const dispatch = useDispatch();
   const [user, setUser] = useState("");
   const [userNameIsValid, setUserNameIsValid] = useState(true);
