@@ -6,7 +6,7 @@ import Store from "./Utils/Store/Store";
 import { Navbar } from "./Navbar/Navbar";
 import { Wrapper } from "./DesignSystem/Wrapper/Wrapper";
 const AppContentWrapper = styled(Wrapper)`
-  width: inherit;
+  width: 100%;
   display: flex;
   flex-flow: column;
 `;
