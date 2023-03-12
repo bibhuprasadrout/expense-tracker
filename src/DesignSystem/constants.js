@@ -22,6 +22,13 @@ body {
 #root {
 		overflow: hidden auto;
 		width: 100%;
+  margin: 0 auto;
+  @media (min-width: 48em) {
+    width: 90vw;
+  }
+  @media (min-width: 64em) {
+    width: 70vw;
+  }
 		height: 100%;
 		padding: 1rem;
 		::-webkit-scrollbar{
