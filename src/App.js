@@ -6,7 +6,7 @@ import Store from "./Utils/Store/Store";
 import { Navbar } from "./Navbar/Navbar";
 import { Wrapper } from "./DesignSystem/Wrapper/Wrapper";
 const AppContentWrapper = styled(Wrapper)`
-  padding: 1rem;
+  width: inherit;
   display: flex;
   flex-flow: column;
 `;
@@ -14,7 +14,7 @@ const App = () => {
   return (
     <>
       <Provider store={Store}>
-        <AppContentWrapper>
+        <AppContentWrapper className="1">
           <Navbar />
           <Outlet />
         </AppContentWrapper>

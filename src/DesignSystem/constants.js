@@ -21,7 +21,14 @@ body {
 }
 #root {
 		overflow: hidden auto;
+		width: 100%;
 		height: 100%;
+		padding: 1rem;
+		::-webkit-scrollbar{
+			display: none;
+			width: 0;
+			height: 0;
+		}
 }
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
