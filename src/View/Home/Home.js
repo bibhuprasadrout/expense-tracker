@@ -12,7 +12,7 @@ const HomeCard = styled(Card)`
   min-height: inherit;
 `;
 export const Home = () => {
-  const homeAuth = useSelector((store) => store.auth);
+  const homeAuth = useSelector((store) => store.userAuth);
   const [homeStatus, setHomeStatus] = useState(false);
   useEffect(() => {
     homeAuth?.currentLoginState ? setHomeStatus(true) : setHomeStatus(false);
