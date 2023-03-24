@@ -14,7 +14,7 @@ const App = () => {
   return (
     <>
       <Provider store={Store}>
-        <AppContentWrapper className="1">
+        <AppContentWrapper>
           <Navbar />
           <Outlet />
         </AppContentWrapper>

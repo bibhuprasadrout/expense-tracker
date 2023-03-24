@@ -17,7 +17,6 @@ export const Home = () => {
     <>
       <HomeWrapper>
         <HomeCard>
-          {/* <ExpenseTracker /> */}
           {homeStatus ? <ExpenseTracker /> : <ExpenseTrackerLoginFirst />}
         </HomeCard>
       </HomeWrapper>

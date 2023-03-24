@@ -13,7 +13,13 @@ const ExpenseTrackedWrapper = styled(Section)`
 `;
 
 export const ExpenseTracker = () => {
-  const [expenseState, setExpenseState] = useState({ testItem: "abc" });
+  const [expenseState, setExpenseState] = useState({
+    year: "All",
+    month: "All",
+    day: "All",
+    type: "All",
+    order: false,
+  });
   const value = { expenseState: expenseState, setExpenseState };
   return (
     <>
