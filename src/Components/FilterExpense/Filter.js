@@ -18,9 +18,41 @@ import {
 import { ExpenseContext } from "../../Utils/Contexts/ExpenseContext";
 const FilterBody = styled.div`
   .filterCardWrapper {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
+    @media (min-width: 40em) {
+      display: flex;
+      justify-content: flex-end;
+    }
     .filterCard {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &.type {
+        grid-column: span 1;
+        order: 1;
+      }
+      &.order {
+        grid-column: span 1;
+        order: 2;
+      }
+      &.date {
+        grid-column: span 2;
+        order: 3;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        @media (min-width: 40em) {
+          display: flex;
+        }
+      }
+      @media (min-width: 40em) {
+        &.type,
+        &.date,
+        &.order {
+          order: inherit;
+        }
+      }
       display: flex;
       gap: 1rem;
       background-color: rgba(0, 0, 0, 0.3);
@@ -213,11 +245,39 @@ export const Filter = ({ expenseState, setExpenseState }) => {
       <FilterBody>
         <Card className="filterCardWrapper">
           {
+            //Set the type filter
+          }
+          <Card
+            className="filterCard type"
+            style={
+              year != "All" ? { pointerEvents: "none", opacity: "0.3" } : {}
+            }
+          >
+            <Card className="filterDropdownCard" onClick={handleTypeOption}>
+              Type: <img src={Images.direct} />
+              <ul
+                className={
+                  optionType ? "filterOptionExpand" : "filterOptionNone"
+                }
+              >
+                {types.map((type, index) => (
+                  <label key={index} onChange={(e) => setType(e.target.value)}>
+                    {type}
+                    <input type="radio" value={type} name="expenseType" />
+                  </label>
+                ))}
+              </ul>
+            </Card>
+          </Card>
+          {
             //Set the date filter
           }
-          <Card className="filterCard">
+          <Card className="filterCard date">
             <span>Date :</span>
-            <Card className="filterDropdownCard" onClick={handleYearOption}>
+            <Card
+              className="filterDropdownCard year"
+              onClick={handleYearOption}
+            >
               Year: <img src={Images.direct} />
               <ul
                 className={
@@ -264,7 +324,7 @@ export const Filter = ({ expenseState, setExpenseState }) => {
               </ul>
             </Card>
             <Card
-              className="filterDropdownCard"
+              className="filterDropdownCard month"
               onClick={handleMonthOption}
               style={
                 year != "All" ? {} : { pointerEvents: "none", opacity: "0.3" }
@@ -295,7 +355,7 @@ export const Filter = ({ expenseState, setExpenseState }) => {
               </ul>
             </Card>
             <Card
-              className="filterDropdownCard"
+              className="filterDropdownCard day"
               onClick={handleDayOption}
               style={
                 year != "All" && month != "All"
@@ -323,29 +383,9 @@ export const Filter = ({ expenseState, setExpenseState }) => {
             </Card>
           </Card>
           {
-            //Set the type filter
-          }
-          <Card className="filterCard">
-            <Card className="filterDropdownCard" onClick={handleTypeOption}>
-              Type: <img src={Images.direct} />
-              <ul
-                className={
-                  optionType ? "filterOptionExpand" : "filterOptionNone"
-                }
-              >
-                {types.map((type, index) => (
-                  <label key={index} onChange={(e) => setType(e.target.value)}>
-                    {type}
-                    <input type="radio" value={type} name="expenseType" />
-                  </label>
-                ))}
-              </ul>
-            </Card>
-          </Card>
-          {
             //Set the order filter
           }
-          <Card className="filterCard">
+          <Card className="filterCard order">
             <Card>
               <label
                 className="input upDownInput"
